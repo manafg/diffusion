@@ -26,8 +26,8 @@ function useRecipe() {
 
       const searchByRecipeName = useCallback(
         (text: string) => {
+          // @ts-ignore
           const sortedRecipe= produce(recipes =>
-            // @ts-ignore
             searchByText(recipes, text),
           );
     

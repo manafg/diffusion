@@ -1,8 +1,11 @@
 import React from 'react';
+import {Container ,  StyledBox} from './styled'
 
 function CreateRecipe () {
     return (
-        <div></div>
+        <Container maxWidth="sm">
+            <StyledBox></StyledBox>
+        </Container>
     )
 }
 
