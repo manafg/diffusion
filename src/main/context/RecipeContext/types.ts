@@ -1,6 +1,6 @@
 import { Dispatch, ReactNode, SetStateAction } from "react";
 
-type RecipesState = Recipe[] ;
+type RecipesState = {message : Recipe[] };
 
 type SelectedRecipeState = Recipe | null;
 

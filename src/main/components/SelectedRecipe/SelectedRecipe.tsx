@@ -5,15 +5,14 @@ import Messenger from '../../icons/Messenger';
 import Twitter from '../../icons/Twitter';
 import Medium from '../../icons/Medium';
 import AddIcon from '@mui/icons-material/Add';
+import {SelectedRecipeTypeProps} from './types'
+function SelectedRecipe({selectedRecipe}:SelectedRecipeTypeProps) {
 
-
-
-function SelectedRecipe() {
     return (
         <StyledWrapper>
             <StyledRecipe>
-                <img width='16px' height='16px' src='../../../../india.png'/>
-                <StyledRecipeName>Jordan</StyledRecipeName>
+                <img width='24px' height='24px' src='../../../../india.png'/>
+                <StyledRecipeName>{selectedRecipe.authenticity}</StyledRecipeName>
             </StyledRecipe>
             <StyledActions>
                 <StyledSharButton>

@@ -1,27 +1,24 @@
 import React from 'react';
 import SearchInput from './SearchInput/SearchInput'
-import Autocomplete , {createFilterOptions} from '@mui/material/Autocomplete';
+import Autocomplete  from '@mui/material/Autocomplete';
 import Item from './Item/Item';
+import useRecipe from "../../hooks/useRecipe";
 
-export default function SearchCuisine() {
-    const [cuisine , setCuisine] = React.useState<any>({ title: 'Thiland', year: 1994 })
+import {initRecipe} from '../../context/RecipeContext/initState'
+export default function SearchCuisine({options = [], selectedRecipe}:any) {
+  const { saveSelectedRecipe } = useRecipe();
+
   return (
       <Autocomplete
-      value={cuisine}
-      onChange={(e,value) => setCuisine(value)}
+      value={selectedRecipe}
+      defaultValue={initRecipe.name}
+      onChange={(e,value) => saveSelectedRecipe(value)}
       renderInput={(params: any) => <SearchInput {...params}/>}
-      options={top100Films}
-      getOptionLabel={(option) => option.title}
+      options={options}
+      getOptionLabel={(option) => option.name}
       renderOption={(props, option) => (
        <Item option={option} props={props}/>
       )}
       />
   );
 }
-
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-  { title: 'Thiland', year: 1994 },
-  { title: 'India', year: 1972 },
-  { title: 'Jodran', year: 1974 },
- ];

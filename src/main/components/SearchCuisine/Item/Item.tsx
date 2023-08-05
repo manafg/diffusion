@@ -1,27 +1,37 @@
 import React from "react";
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import {ListItemText , Box} from '@mui/material';
-import InboxIcon from '@mui/icons-material/Inbox';
+import {ListItemText , Box, ListItemButton, ListItemIcon} from '@mui/material';
 import Easy from '../../../icons/Easy';
-import Medium from '../../../icons/Medium';
+import Average from '../../../icons/Average';
 import Hard from '../../../icons/Hard';
+import { renderText } from '../../../utils/RecipeLevel'
 import {StyledBox , StyledListItem , StyledListItemText} from './styles'
 
 function Item ({option , props} :any) {
-    debugger
+
+  const renderIcon = (difficulty:any) => {
+    switch (difficulty) {
+      case 1:
+        return <Easy />;
+      case 2:
+        return <Average />;
+      case 3:
+        return <Hard /> ;
+      default:
+        return <Easy />;
+    }
+  };
+
     return (
             <StyledListItem {...props} >
              <ListItemButton>
              <ListItemIcon>
                 <img width='16px' height='16px' src='../../../../india.png'/>
               </ListItemIcon>
-             <ListItemText primary={option.title} />
+             <ListItemText primary={option.name} />
              <StyledBox >
-                <Easy/>
-                <StyledListItemText primary='Hard'/>
+                {renderIcon(option?.difficulty)}
+                <StyledListItemText primary={renderText(option?.difficulty)}/>
                 <StyledListItemText primary='35Min'/>
               </StyledBox>
              </ListItemButton>

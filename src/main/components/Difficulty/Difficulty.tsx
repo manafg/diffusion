@@ -1,16 +1,18 @@
 import React  from "react";
 import {StyledWrraper, StyledInfo ,StyledBody, StyledTitleContainer , StyledTitle} from './styles'
+import {DifficultyProps} from './DifficultyProps';
+import {renderColor , renderText } from '../../utils/RecipeLevel';
 
-function Difficulty() {
+function Difficulty({selectedRecipe}: DifficultyProps) {
     return (
         <StyledWrraper>
-            <StyledInfo>
-                <StyledTitleContainer>
+            <StyledInfo sx={{ backgroundColor: renderColor(selectedRecipe.difficulty)}}>
+                <StyledTitleContainer >
                     <img width='32px' height='32px' src='../../../../dish.png'/>
-                    <StyledTitle variant="h6">Difficulty: Medium</StyledTitle>
+                    <StyledTitle variant="h6">Difficulty: {renderText(selectedRecipe.difficulty)}</StyledTitle>
                 </StyledTitleContainer>
                 <StyledBody>
-                    Spanish paella is a traditional rice dish that originated in the Valencia region of Spain. It was originally made with ingredients such as saffron, rabbit, and snails, which were common in the area.
+                    {selectedRecipe.description}
                 </StyledBody>
             </StyledInfo>
         </StyledWrraper>

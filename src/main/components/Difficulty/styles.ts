@@ -7,7 +7,6 @@ const StyledWrraper =  styled(Paper)(({ theme }) => ({
 }));
 
 const StyledInfo =  styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.secondary.light,
     height: 160,
     borderRadius:10,
     padding: theme.spacing(4)
