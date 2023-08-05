@@ -12,7 +12,7 @@ function SelectedRecipe({selectedRecipe}:SelectedRecipeTypeProps) {
         <StyledWrapper>
             <StyledRecipe>
                 <img width='24px' height='24px' src='../../../../india.png'/>
-                <StyledRecipeName>{selectedRecipe.authenticity}</StyledRecipeName>
+                <StyledRecipeName>{selectedRecipe.origin}</StyledRecipeName>
             </StyledRecipe>
             <StyledActions>
                 <StyledSharButton>

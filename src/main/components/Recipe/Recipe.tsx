@@ -4,7 +4,6 @@ import Stack from '@mui/material/Stack';
 import {RecipeTypeProps} from './RecipeTypeProps'
 
 function Recipe ({selectedRecipe} : RecipeTypeProps) {
-
     return (
         <StyledWrraper>
             <Stack spacing={2}>
@@ -14,15 +13,15 @@ function Recipe ({selectedRecipe} : RecipeTypeProps) {
                     Protein
                 </StyledHeader>
                 <StyledInfoWhite title='Protein'>
-                    {selectedRecipe.protein}
+                    {selectedRecipe.protein || 'N/A'}
                 </StyledInfoWhite>
             </Stack>
             <Stack sx={{width:125}} direction="column">
                 <StyledHeader variant='subtitle1'>
-                    Protein
+                Spice Level
                 </StyledHeader>
                 <StyledInfoNeutral sx={{color: 'red'}}>
-                {selectedRecipe.protein}
+                {selectedRecipe.produce || 'N/A'}
                 </StyledInfoNeutral>
             </Stack>
             </Stack>
@@ -33,7 +32,7 @@ function Recipe ({selectedRecipe} : RecipeTypeProps) {
                     Spices
                 </StyledHeader>
                 <StyledInfoFire>
-                {selectedRecipe.spice}
+                {selectedRecipe.spice || 'N/A'}
                 </StyledInfoFire>
             </Stack>
             <Stack sx={{width:125}} direction="column">
@@ -41,7 +40,7 @@ function Recipe ({selectedRecipe} : RecipeTypeProps) {
                     Cooking Oil
                 </StyledHeader>
                 <StyledInfoFire >
-                {selectedRecipe.cookingOil}
+                {selectedRecipe.cookingOil || 'N/A'}
                 </StyledInfoFire>
             </Stack>
             </Stack>
@@ -52,7 +51,7 @@ function Recipe ({selectedRecipe} : RecipeTypeProps) {
                     Voulome / Weight
                 </StyledHeader>
                 <StyledInfoWhite>
-                {selectedRecipe.volume}
+                {selectedRecipe.volume || 'N/A'}
                 </StyledInfoWhite>
             </Stack>
             <Stack sx={{width:125}} direction="column">
@@ -60,7 +59,7 @@ function Recipe ({selectedRecipe} : RecipeTypeProps) {
                     Serves
                 </StyledHeader>
                 <StyledInfoWhite >
-                {selectedRecipe.serves}
+                {selectedRecipe.serves || 'N/A'}
                 </StyledInfoWhite>
             </Stack>
             </Stack>
