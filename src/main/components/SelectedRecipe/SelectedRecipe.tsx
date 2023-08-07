@@ -1,12 +1,18 @@
 import React from 'react';
-
 import {StyledActions ,CreateRecipeButton, StyledSharButton,StyledRecipeName, StyledWrapper , StyledRecipe} from './styles';
 import Messenger from '../../icons/Messenger';
 import Twitter from '../../icons/Twitter';
 import Medium from '../../icons/Medium';
 import AddIcon from '@mui/icons-material/Add';
-import {SelectedRecipeTypeProps} from './types'
+import {SelectedRecipeTypeProps} from './types';
+import { useNavigate } from 'react-router-dom';
+
 function SelectedRecipe({selectedRecipe}:SelectedRecipeTypeProps) {
+    const navigate = useNavigate();
+
+    const navigateToCreateRecipe = () => {
+        navigate('/create');
+      };
 
     return (
         <StyledWrapper>
@@ -24,7 +30,7 @@ function SelectedRecipe({selectedRecipe}:SelectedRecipeTypeProps) {
                 <StyledSharButton>
                     <Medium/>
                 </StyledSharButton>
-                <CreateRecipeButton variant="contained" startIcon={<AddIcon />}>
+                <CreateRecipeButton onClick={navigateToCreateRecipe} variant="contained" startIcon={<AddIcon />}>
                     Add Recipe
                 </CreateRecipeButton>
             </StyledActions>

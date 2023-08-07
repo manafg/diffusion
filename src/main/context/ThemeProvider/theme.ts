@@ -2,6 +2,22 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   spacing: [0, 4, 8, 16, 24, 32, 64],
+  components: {
+    MuiAutocomplete: {
+      styleOverrides: {
+        option: {
+          color: 'white',  // Setting the text color to white
+        },
+      },
+    },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          color: '#FFF',
+        },
+      },
+    },
+  },
   typography: {
     fontFamily: 'Bai Jamjuree, Arial, sans-serif',
     subtitle1: {

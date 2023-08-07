@@ -10,7 +10,6 @@ import {Container , Box , styled} from '@mui/material';
 const StyledBox= styled(Box)(({ theme }) => ({
     backgroundColor: theme.palette.background.default,
     width:410,
-    height: 630,
     padding: theme.spacing(4)
   }));
 
@@ -24,7 +23,7 @@ function App() {
             <StyledBox>
               <Routes>
                 <Route path="/"  element={<RecipeList/>} />
-                <Route path="/create-new-recipe" element={<CreateRecipe/>}/>
+                <Route path="/create" element={<CreateRecipe/>}/>
               </Routes>
               </StyledBox>
             </Container>
