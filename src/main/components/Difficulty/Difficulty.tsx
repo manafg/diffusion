@@ -8,7 +8,7 @@ function Difficulty({selectedRecipe}: DifficultyProps) {
         <StyledWrraper>
             <StyledInfo sx={{ backgroundColor: renderColor(selectedRecipe.difficulty)}}>
                 <StyledTitleContainer >
-                    <img width='32px' height='32px' src='../../../../dish.png'/>
+                    <img width='32px' height='32px' src='../../../../dish.png' alt='dish icon'/>
                     <StyledTitle variant="h6">Difficulty: {renderText(selectedRecipe.difficulty)}</StyledTitle>
                 </StyledTitleContainer>
                 <StyledBody>

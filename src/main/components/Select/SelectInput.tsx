@@ -1,6 +1,6 @@
 import React from 'react';
-import { Control, Controller, FieldValues } from 'react-hook-form';
-import { Select, MenuItem, FormControl, Typography, FormHelperText , Stack} from '@mui/material';
+import { Controller } from 'react-hook-form';
+import { MenuItem, FormControl, Typography, FormHelperText , Stack} from '@mui/material';
 import {SelectInputProps} from './type'
 import {StyledSelectField} from './styles'
 

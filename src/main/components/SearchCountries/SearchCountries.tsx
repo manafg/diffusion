@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Controller } from 'react-hook-form';
-import { Autocomplete, Typography, TextField, Stack, FormControl, FormHelperText } from '@mui/material';
+import { Autocomplete, Typography, Stack, FormControl } from '@mui/material';
 import { SearchCountriesProps  } from './types'
 import {StyledTextField} from './styles'
 

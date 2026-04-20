@@ -1,6 +1,5 @@
 import React from "react";
-import List from '@mui/material/List';
-import {ListItemText , Box, ListItemButton, ListItemIcon} from '@mui/material';
+import {ListItemText , ListItemButton, ListItemIcon} from '@mui/material';
 import Easy from '../../../icons/Easy';
 import Average from '../../../icons/Average';
 import Hard from '../../../icons/Hard';
@@ -26,7 +25,7 @@ function Item ({option , props} :any) {
             <StyledListItem {...props} >
              <ListItemButton>
              <ListItemIcon>
-                <img width='16px' height='16px' src='../../../../india.png'/>
+                <img width='16px' height='16px' src='../../../../india.png' alt='country icon'/>
               </ListItemIcon>
              <ListItemText primary={option.name} />
              <StyledBox >

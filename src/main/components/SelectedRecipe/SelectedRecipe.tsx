@@ -17,7 +17,7 @@ function SelectedRecipe({selectedRecipe}:SelectedRecipeTypeProps) {
     return (
         <StyledWrapper>
             <StyledRecipe>
-                <img width='24px' height='24px' src='../../../../india.png'/>
+                <img width='24px' height='24px' src='../../../../india.png' alt='origin flag'/>
                 <StyledRecipeName>{selectedRecipe.origin}</StyledRecipeName>
             </StyledRecipe>
             <StyledActions>
