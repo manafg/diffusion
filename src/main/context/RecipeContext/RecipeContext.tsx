@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-import {RecipesContextProviderProps , RecipeContextType , RecipesState, SelectedRecipeState} from "./types";
+import {RecipesContextProviderProps , RecipeContextType , SelectedRecipeState} from "./types";
 
 import {initRecipe} from './initState';
 

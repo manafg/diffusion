@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c0548a5d.css",
+    "main.js": "/static/js/main.b601fc5d.js",
+    "static/js/787.89501828.chunk.js": "/static/js/787.89501828.chunk.js",
+    "static/media/BaiJamjuree-Regular.ttf": "/static/media/BaiJamjuree-Regular.b6013786559eeb4c3543.ttf",
+    "static/media/BaiJamjuree-Bold.ttf": "/static/media/BaiJamjuree-Bold.da1cfc75e1ff64984f88.ttf",
+    "index.html": "/index.html",
+    "main.c0548a5d.css.map": "/static/css/main.c0548a5d.css.map",
+    "main.b601fc5d.js.map": "/static/js/main.b601fc5d.js.map",
+    "787.89501828.chunk.js.map": "/static/js/787.89501828.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0548a5d.css",
+    "static/js/main.b601fc5d.js"
+  ]
+}

@@ -1,6 +1,6 @@
 import {produce} from "immer";
 import { useContext, useCallback } from "react";
-import { Recipe, RecipesState , RecipesResponse, SelectedRecipeResponse, SelectedRecipeState, RecipeContextType } from '../context/RecipeContext/types'
+import { RecipesResponse, SelectedRecipeResponse } from '../context/RecipeContext/types'
 import { RecipesStateContext } from '../context/RecipeContext/RecipeContext'
 import {searchByText} from '../utils/search';
 
@@ -33,7 +33,7 @@ function useRecipe() {
     
           setRecipes(sortedRecipe);
         },
-        [setRecipes, recipes],
+        [setRecipes],
       );
 
       return {

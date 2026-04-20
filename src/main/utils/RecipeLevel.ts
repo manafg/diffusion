@@ -1,5 +1,3 @@
-import React from 'react';
-
 const renderText = (difficulty:number) : string=> {
     switch (difficulty) {
       case 1:

@@ -1,5 +1,5 @@
 
-import {Container , Box , styled, Typography , Button} from '@mui/material';
+import {Container , Box , styled, Button} from '@mui/material';
 
 const StyledBox= styled(Box)(({ theme }) => ({
       marginTop: 10
